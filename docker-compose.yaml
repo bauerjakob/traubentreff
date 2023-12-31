@@ -1,0 +1,9 @@
+version: "3.1"
+
+services:
+    traubentreff-website:
+        image: traubentreff-website:1.0
+        build:
+            context: .
+        ports:
+            - 8084:4321
