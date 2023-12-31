@@ -9,7 +9,7 @@ import Wine from "../components/Wine.astro";
 <Layout title="Welcome to Astro.">
     <Navbar />
     <header>
-        <h1>Wilkommen bei</h1>
+        <h1>Wilkommen beim</h1>
         <img id="banner" src="/banner.png" />
         <h2>Entdecken. Genießen. Wiederholen.</h2>
         <p class="slogan">
@@ -101,7 +101,7 @@ import Wine from "../components/Wine.astro";
             />
         </ul>
 
-        <img class="imageBanner" src="/dismantling.png" />
+        <img class="imageBanner" id="dismantling" src="/dismantling.png" />
     </main>
 
     <Footer />
@@ -114,12 +114,15 @@ import Wine from "../components/Wine.astro";
     header {
         font-family: "EB Garamond", serif;
         text-align: center;
-        margin: 0 auto;
-        max-width: 90%;
+        max-width: 95%;
         color: #1c2d2a;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         #banner {
-            width: 20rem;
+            width: 15rem;
             max-width: 100%;
 
             height: auto;
@@ -132,8 +135,7 @@ import Wine from "../components/Wine.astro";
 
         .slogan {
             font-family: "Inter", sans-serif;
-            max-width: 95%;
-            width: 48rem;
+            max-width: 48rem;
             font-weight: 400;
             text-align: justify;
             margin: 0 auto;
@@ -262,5 +264,9 @@ import Wine from "../components/Wine.astro";
         grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
         gap: 2rem;
         padding: 0;
+    }
+
+    #dismantling {
+        margin-top: 3rem;
     }
 </style>
