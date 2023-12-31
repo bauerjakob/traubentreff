@@ -1,0 +1,39 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="dropShadow">
+    <div id="somestuff">
+        <!-- <hr /> -->
+        <p>® {year} Otto von Lemberg ®</p>
+    </div>
+    <!-- <Test /> -->
+</footer>
+
+<style lang="scss">
+    footer {
+        margin-top: var(--spacing);
+        padding: calc(var(--spacing) / 2) 0;
+        background-color: rgb(172, 191, 230, 3%);
+
+        p {
+            font-size: 13pt;
+            text-align: center;
+            font-weight: 500;
+            font-family: "Inter", serif;
+        }
+
+        img {
+            height: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        hr {
+            color: #fefefe4f;
+        }
+
+        #somestuff {
+            margin: 0 auto;
+        }
+    }
+</style>

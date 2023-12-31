@@ -1,0 +1,38 @@
+---
+const { image, price, title, description } = Astro.props;
+---
+
+<div id="wrapper">
+    <h1>{title}</h1>
+    <img src={image} />
+    <p>{description}</p>
+    <p id="price">{price}</p>
+</div>
+
+<style lang="scss">
+    #wrapper {
+        width: 47rem;
+        max-width: 95%;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    h1 {
+        margin-bottom: 0;
+        font-family: "EB Garamond", serif;
+        text-align: center;
+    }
+
+    #price {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        font-family: "EB Garamond", serif;
+    }
+</style>

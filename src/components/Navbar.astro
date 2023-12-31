@@ -1,0 +1,122 @@
+---
+
+---
+
+<nav aria-label="Main Menu" class="glass">
+    <div class="navigation wrapper">
+        <a href="/">
+            <img id="logo" src="/logo.png" />
+            <p class="header">TraubenTreff</p>
+        </a>
+
+        <ul class="navigation-list">
+            <li class="navigation-list-links">
+                <a
+                    class="navButton"
+                    href="https://www.youtube.com/watch?v=oT3mCybbhf0&pp=ygUkcmljayBhc3RsZXkgbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXAg"
+                    >Jetzt bestellen</a
+                >
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<style lang="scss">
+    nav {
+        background-color: #fbf6f0;
+        position: sticky;
+        padding: 0.2rem 0;
+        z-index: 100;
+        top: 0;
+        width: 100vw !important;
+    }
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        margin: 0 2rem;
+
+        transition: filter 0.3s ease-in-out;
+
+        & > a {
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+            p {
+                white-space: nowrap;
+            }
+        }
+
+        #logo {
+            height: 2.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .navigation-list {
+            list-style-type: none;
+        }
+
+        .header {
+            font-weight: bold;
+            font-size: 15pt;
+        }
+    }
+    .drop-shadow {
+        filter: drop-shadow(0.05rem 0.05rem 0.3rem #c2c2c2);
+    }
+    .glass {
+        background: linear-gradient(
+            135deg,
+            rgba(251, 246, 240, 0.9),
+            rgba(251, 246, 240, 0.55)
+        );
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .navButton {
+        text-decoration: none;
+        cursor: pointer;
+        color: #fbf6f0;
+        font-weight: 600;
+        font-size: 13pt;
+
+        background-color: #486ec0;
+        padding: 0.4rem 1rem;
+        border-radius: 0.3rem;
+    }
+
+    .navButton:hover {
+        background-color: #375baa;
+    }
+
+    @media (max-width: 25rem) {
+        .header {
+            font-size: 13pt !important;
+        }
+        .navButton {
+            font-size: 11pt;
+            padding: 0.4rem 0.5rem;
+        }
+        #logo {
+            height: 2rem !important;
+        }
+    }
+</style>
+
+<script>
+    const nav = document.querySelector("nav");
+    window.addEventListener("scroll", (event) => {
+        if (nav != null) {
+            if (window.scrollY > 30) {
+                nav.classList.add("drop-shadow");
+            } else {
+                nav.classList.remove("drop-shadow");
+            }
+        }
+    });
+</script>
